@@ -15,6 +15,7 @@ const morgan=require('morgan')
 const cors=require('cors')
 const app=express()
 app.use(express.json())
+app.use(express.static('build'))
 app.use(cors())
 morgan.token('id', function getId (req) {
     if(req.method==='POST'){
