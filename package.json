@@ -7,14 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build:ui": "rm -rf build && cd ../part2/part2.5/ && npm run build && cp -r build ~/Desktop/Fullstackopen/part2.5backend/",
-    "deployfull": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "buildui": "rm -rf build && cd ../part2/part2.5/ && npm run build && cp -r build ~/Desktop/Fullstackopen/part2.5backend/",
+    "deployfull": "npm run buildui && git add . && git commit -m uibuild && git push"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^7.1.1",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
